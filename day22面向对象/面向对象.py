@@ -1,12 +1,14 @@
-class first:
-    def email(self,a):
-        print(a)
-    def message(self,b):
-        print(b)
-    def send(self,c):
-        print(c)
-obj = first()
-print(obj)
-obj.email("a")
-obj.message("b")
-obj.send("c")
+# class first:
+#     def __init__(self,name,age):
+#         self.n1=name
+#         self.n2=age
+#     def email(self):
+#         print(self.n1,self.n2)
+#     def message(self):
+#         print(self.n1,self.n2)
+#     def send(self):
+#         print(self.n1,self.n2)
+# obj = first("李帅",28)
+# obj.email()
+# obj.message()
+# obj.send()
