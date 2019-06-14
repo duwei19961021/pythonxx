@@ -37,14 +37,14 @@ class user: #用户类
         self.mobile = mobile
 
     @staticmethod
-    def md5(password):  # 密码非明文
+    def md5(password):  # 密码非明文,静态方法，无需使用对象中封装的值
         m = hashlib.md5()
         m.update(password.encode("utf8"))
         a_md5 = m.hexdigest()
         return a_md5
 
     @staticmethod
-    def execsql(sql):  # 执行sql
+    def execsql(sql):  # 执行sql,静态方法，无需使用对象中封装的值
         db = pymysql.connect("139.196.120.52", "python", "123456", "shop")
         cursur = db.cursor()
         cursur.execute(sql)
@@ -88,9 +88,13 @@ class user: #用户类
         else:
             print("your username or password error!")
 
-
-
-obj = user("duwei3","123456d",13487459070)
-obj.login()
+obj = user("duwei","1234566",13487459075)
+choice = eval(input("input your choice:"))
+if choice == 1:
+    obj.registered()
+elif choice ==2:
+    obj.login()
+elif choice == 3:
+    obj.modifypwd()
 
 
