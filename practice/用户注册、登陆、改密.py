@@ -61,8 +61,12 @@ class user: #用户类
             return 1
 
     def registered(self): #注册
-        sql1 = "insert into shop.users (user_name,Password,mobile) values ('{}','{}',{});".format(self.username, self.password,self.mobile)
-        self.execsql(sql1)
+        if self.checkuser() == 1:
+            print("user had exist!")
+        else:
+            sql1 = "insert into shop.users (user_name,Password,mobile) values ('{}','{}',{});".format(self.username, self.md5(self.password),self.mobile)
+            self.execsql(sql1)
+            print("register successfuly")
 
     def modifypwd(self):  # 修改密码
         if self.checkuser() == 1:
@@ -86,7 +90,7 @@ class user: #用户类
 
 
 
-obj = user("duwei","123456",13487459076)
+obj = user("duwei3","123456d",13487459070)
 obj.login()
 
 
