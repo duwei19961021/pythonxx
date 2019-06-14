@@ -37,7 +37,7 @@ class user: #用户类
         self.mobile = mobile
 
     @staticmethod
-    def md5(password):  # 密码加密成非明文
+    def md5(password):  # 密码非明文
         m = hashlib.md5()
         m.update(password.encode("utf8"))
         a_md5 = m.hexdigest()
