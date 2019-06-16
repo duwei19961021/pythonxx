@@ -8,6 +8,6 @@ class page:
     @property
     def endpage(self):
         return self.perpage*self.page+1
-obj = page(10,8)
+obj = page(12,80)
 for pageone in range(obj.startpage,obj.endpage):
     print(pageone)
