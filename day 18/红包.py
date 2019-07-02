@@ -1,7 +1,7 @@
 import random
 List = []
 hongbao = []
-a, b = 100, 10
+a, b = 95, 10
 for i in range(b-1):
     ret = random.randint(0,a)
     List.append(ret)
