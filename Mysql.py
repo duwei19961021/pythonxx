@@ -1,6 +1,6 @@
 import  pymysql
 def chushihua():
-    connection = pymysql.connect(host='139.196.120.52',
+    connection = pymysql.connect(host='',
                                  port=3306,
                                  user='python',
                                  password='123456',
